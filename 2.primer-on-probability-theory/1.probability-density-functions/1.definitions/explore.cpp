@@ -70,7 +70,7 @@ int main() {
 
   auto uniform_a = [] (double x) { return 2.0 + x - x; };
   auto uniform_b = [] (double x) { return -2.0 + x - x; };
-  auto unnormalized_gaussian = [] (double x) { return std::exp(-1 * x * x / 2); };
+  auto unnormalized_gaussian = [] (double x) { return std::exp(-1 * x * x); };
 
   std::cout << "uniform a result: " << is_pdf(uniform_a, 0.0, 0.5) << std::endl;
   std::cout << "uniform a integral: " << simpson_on(uniform_a, 0.0, 0.5) << std::endl;
